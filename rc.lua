@@ -671,18 +671,17 @@ beautiful.border_width = 2
 -- compsitor
 --awful.spawn.with_shell("compton")
 --set-resolution
-awful.spawn.with_shell("/home/alireza/.screenlayout/set-resolution.sh")
+awful.spawn.with_shell("~/.config/awesome/scripts/set-resolution.sh")
 
 --common
-awful.spawn.with_shell("/home/alireza/.tiling-configs/common.sh")
+awful.spawn.with_shell("~/.config/awesome/scripts/common.sh")
 
 -- compsitor
 --Picom
 awful.spawn.with_shell("picom --experimental-backends --config ~/.config/picom.conf ")
 
 --wallpaper
-awful.spawn.with_shell("feh --bg-scale ~/images/wallpaper/3.jpg")
-
+awful.spawn.with_shell("feh --bg-scale ~/.config/awesome/themes/1.jpg")
 
 
 
