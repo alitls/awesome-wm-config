@@ -1,5 +1,5 @@
 -- If LuaRocks is installed, make sure that packages installed through it are
--- found (e.g. lgi). If LuaRocks is not installed, do nothing.
+
 pcall(require, "luarocks.loader")
 
 -- Standard awesome library
@@ -94,6 +94,21 @@ awful.layout.layouts = {
 -- }}}
 
 -- {{{ Menu
+
+-- theme.lua or in your rc.lua before menu creation
+
+beautiful.menu_height = 25
+beautiful.menu_width  = 200
+beautiful.menu_border_color = "#89b4fa"
+beautiful.menu_border_width = 2
+beautiful.menu_bg_normal = "#1e1e2e"
+beautiful.menu_fg_normal = "#cdd6f4"
+beautiful.menu_bg_focus  = "#89b4fa"
+beautiful.menu_fg_focus  = "#1e1e2e"
+
+
+
+
 -- Create a launcher widget and a main menu
 myawesomemenu = {
    { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
@@ -678,10 +693,12 @@ awful.spawn.with_shell("~/.config/awesome/scripts/common.sh")
 
 -- compsitor
 --Picom
-awful.spawn.with_shell("picom --experimental-backends --config ~/.config/picom.conf ")
+--awful.spawn.with_shell("picom --experimental-backends --config ~/.config/picom.conf ")
 
 --wallpaper
-awful.spawn.with_shell("feh --bg-scale ~/.config/awesome/themes/1.jpg")
+awful.spawn.with_shell("feh --bg-scale ~/images/wallpaper/3.jpg")
+
+awful.spawn.with_shell("eval $(gnome-keyring-daemon --start) && export $(gnome-keyring-daemon --start)")
 
 
 
